@@ -20,5 +20,8 @@ optimal_threshold = max(tpr - fpr for fpr, tpr, _ in roc_curve(y_true, y_scores)
 ```
 
 - **Delong Test**:
-  - Formula: $$ \( \text{AUC}_{1} - \text{AUC}_{2} \sim \text{Normal}\left(0, \text{Var}(\text{AUC}_{1}) + \text{Var}(\text{AUC}_{2}) - 2 \cdot \text{Cov}(\text{AUC}_{1}, \text{AUC}_{2})\right) \) $$
+  - Formula:
+    $$
+    \( \text{AUC}_{1} - \text{AUC}_{2} \sim \text{Normal}\left(0, \text{Var}(\text{AUC}_{1}) + \text{Var}(\text{AUC}_{2}) - 2 \cdot \text{Cov}(\text{AUC}_{1}, \text{AUC}_{2})\right) \)
+    $$
   - Used to compare the areas under two ROC curves to assess statistical significance.
