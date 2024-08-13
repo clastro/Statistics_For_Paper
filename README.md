@@ -17,6 +17,7 @@ Where:
 ```python
 # Calculate the optimal threshold using Youden's J statistic
 optimal_threshold = max(tpr - fpr for fpr, tpr, _ in roc_curve(y_true, y_scores))[2]
+```
 
 - **Delong Test**:
   - Formula: \( \text{AUC}_{1} - \text{AUC}_{2} \sim \text{Normal}\left(0, \text{Var}(\text{AUC}_{1}) + \text{Var}(\text{AUC}_{2}) - 2 \cdot \text{Cov}(\text{AUC}_{1}, \text{AUC}_{2})\right) \)
