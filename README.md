@@ -3,18 +3,9 @@
 ## Youden's J Statistic for Threshold Optimization
 
 Youden's J Statistic Formula:
-
-𝐽
-=
-Sensitivity
-+
-Specificity
-−
-1
-J=Sensitivity+Specificity−1
+𝐽 = Sensitivity + Specificity − 1
 
 Where:
-
 Sensitivity (True Positive Rate) is the proportion of actual positives correctly identified by the test.
 Specificity (True Negative Rate) is the proportion of actual negatives correctly identified by the test.
 
@@ -24,9 +15,10 @@ python
 ```
 optimal_threshold = max(tpr - fpr for fpr, tpr, _ in roc_curve(y_true, y_scores))[2]
 ```
+Calculate the optimal threshold using Youden's J statistic
 
-## Calculate the optimal threshold using Youden's J statistic
-Delong Test
+## Delong Test
+
 The Delong test compares the areas under two ROC curves to assess if there is a statistically significant difference between them.
 
 python
