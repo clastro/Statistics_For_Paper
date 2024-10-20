@@ -27,7 +27,7 @@ def calculate_metrics(y_true, y_pred_proba):
     # PPV and NPV
     ppv = tp / (tp + fp)
     npv = tn / (tn + fn)
-    
+
     # AUROC
     auroc = roc_auc_score(y_true, y_pred_proba)
     
